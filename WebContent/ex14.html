@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	<h2>배열</h2>
+	
+	
+
+</body>
+
+<script type="text/javascript">
+
+var array = [];
+array[0] = 1;
+array[1] = 2.5;
+array[2] = "안녕";
+array[3] = "hello";
+array[4] = 3>5;
+
+console.log(array[0]);
+console.log(array[1]);
+console.log(array[2]);
+console.log(array[3]);
+console.log(array[4]);
+
+console.log(array);
+
+console.log("----------------")
+
+for(var i=0; i<array.length; i++){
+	var data = array[i]
+	console.log(data);
+}
+
+console.log("----------------")
+
+var personVo = {
+	name:"루시드",
+	hp:"010",
+	company:"02"
+}
+
+
+
+
+
+var array2 = [273, "문자열", 5>3, plus(4,4), function(){return 5+100}, [273,100], personVo ];
+console.log(array2[0]);
+console.log(array2[1]);
+console.log(array2[2]);
+console.log(array2[3]);
+console.log(array2[4]());
+console.log(array2[5][1]);
+console.log(personVo);
+
+//정의
+function plus(a, b){
+	var sum = a + b;
+	return sum
+}
+	
+	
+</script>
+
+
+</html>

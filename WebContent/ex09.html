@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	<h2>함수(function)</h2>
+	
+	
+
+</body>
+
+<script type="text/javascript">
+	
+	//이름있는 함수(선언적 함수)	----> 정의부분부터 조사된다(사용부분의 위치를 변경해서 실험)
+	function testA(){
+		console.log("testA 함수입니다.");
+	}
+	
+	//사용하는법		testA 이름,	 	() 실행
+	testA();
+	
+	/////////////////////////////////////////////////////////////////////////
+	
+								// (만들고 바로 사용)
+	//이름없는 함수(익명함수)	----> 실제로 이름이 없으면 사용할 수 없다 > 변수에 할당해서 변수 이름을 사용
+	var testB = function(){
+		console.log("익명함수입니다.");
+	}
+	
+	//사용하는법	 	testB 이름, 		() 실행
+	//변수에 function이 대입되고 난 후에 사용해야 함(순서 중요)
+	testB();		//순서 변경해서 실험 Uncaught TypeError: testB is not a function
+	
+	
+	var no = 3;
+	no();
+	
+</script>
+
+
+</html>

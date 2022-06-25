@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>자바스크립트</h1>
+	<h2>이벤트 (~할때)</h2>
+	
+	
+	<input id="left" type="text" value=""> + <input  id="right" type="text" value=""><br> 
+	<button id="btnPlus" type="button">더하기</button>
+	
+	<p id="display">더하기 결과</p>
+	
+	
+
+</body>
+
+<script type="text/javascript">
+window.onload = function(){
+	
+	var btnPlus = document.getElementById("btnPlus")
+	var left = document.getElementById("left")
+	var right = document.getElementById("right")
+	var display = document.getElementById("display")
+	
+	//버튼을 클릭했때(이벤트)
+	btnPlus.onclick = function(){
+		console.log("버튼클릭")
+		
+		var leftNo = parseInt(left.value)
+		var rightNo = parseInt(right.value)
+		var sum = leftNo + rightNo
+		
+		console.log(sum)
+		
+		display.innerHTML = sum 
+		
+	}
+}
+
+</script>
+
+
+</html>

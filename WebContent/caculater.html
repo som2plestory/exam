@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>계산기</title>
+<style>
+	p  {padding:10px;
+		width:205px;
+		background-color:grey;
+		color:#000000;
+		font-size:18px;
+		font-weight:bold;
+		text-align:right;
+		}
+	button {background-color:#FFFFFF;
+			margin:1px;
+			width:50px;
+			height:50px;
+			font-size:16px;
+			cursor:pointer;}
+</style>
+</head>
+<body>
+	<p id="display">0</p>
+	<button id="7" type="button">7</button>
+	<button id="8" type="button">8</button>
+	<button id="9" type="button">9</button>
+	<button id="÷" type="button">÷</button><br>
+	<button id="4" type="button">4</button>
+	<button id="5" type="button">5</button>
+	<button id="6" type="button">6</button>
+	<button id="×" type="button">×</button><br>
+	<button id="1" type="button">1</button>
+	<button id="2" type="button">2</button>
+	<button id="3" type="button">3</button>
+	<button id="－" type="button">－</button><br>
+	<button id="C" type="button">C</button>
+	<button id="0" type="button">0</button>
+	<button id="＝" type="button">=</button>
+	<button id="＋" type="button">＋</button><br>
+	
+</body>
+
+<script type="text/javascript">
+window.onload = function(){
+	
+	var result = ''
+	var num1
+	var num2
+	var op = ''
+	
+	var display = document.getElementById("display")
+	var one = document.getElementById("1")
+	var two = document.getElementById("2")
+	var three = document.getElementById("3")
+	var four = document.getElementById("4")
+	var five = document.getElementById("5")
+	var six = document.getElementById("6")
+	var seven = document.getElementById("7")
+	var eight = document.getElementById("8")
+	var nine = document.getElementById("9")
+	var zero = document.getElementById("0")
+	var plus = document.getElementById("＋")
+	var minus = document.getElementById("－")
+	var multple = document.getElementById("×")
+	var divide = document.getElementById("÷")
+	var equal = document.getElementById("＝")
+	var C = document.getElementById("C")
+	
+	one.onclick = function(){
+		if(result!='0'){
+			result = result + '1'
+		}else{
+			result = '1'
+		}
+		display.innerHTML = result
+	}
+	
+	two.onclick = function(){
+		if(result!='0'){
+			result = result + '2'
+		}else{
+			result = '2'
+		}
+		display.innerHTML = result
+	}
+	
+	three.onclick = function(){
+		if(result!='0'){
+			result = result + '3'
+		}else{
+			result = '3'
+		}
+		display.innerHTML = result
+	}
+	
+	four.onclick = function(){
+		if(result!='0'){
+			result = result + '4'
+		}else{
+			result = '4'
+		}
+		display.innerHTML = result
+	}
+	
+	five.onclick = function(){
+		if(result!='0'){
+			result = result + '5'
+		}else{
+			result = '5'
+		}
+		display.innerHTML = result
+	}
+	
+	six.onclick = function(){
+		if(result!='0'){
+			result = result + '6'
+		}else{
+			result = '6'
+		}
+		display.innerHTML = result
+	}
+	
+	seven.onclick = function(){
+		if(result!='0'){
+			result = result + '7'
+		}else{
+			result = '7'
+		}
+		display.innerHTML = result
+	}
+	
+	eight.onclick = function(){
+		if(result!='0'){
+			result = result + '8'
+		}else{
+			result = '8'
+		}
+		display.innerHTML = result
+	}
+	
+	nine.onclick = function(){
+		if(result!='0'){
+			result = result + '9'
+		}else{
+			result = '9'
+		}
+		display.innerHTML = result
+	}
+	
+	zero.onclick = function(){
+		if(result!='0'){
+			result = result + '0' 
+		}
+		display.innerHTML = result
+	}
+	
+	plus.onclick = function(){
+		if(result!=''){
+			num1 = parseInt(result)
+			console.log(num1)
+			result = '' 
+			console.log('＋')
+		}
+		op = '+'
+		display.innerHTML = '＋'
+	}
+	
+	minus.onclick = function(){
+		if(result!=''){
+			num1 = parseInt(result)
+			console.log(num1)
+			result = '' 
+			console.log('－')
+		}
+		op = '-'
+		display.innerHTML = '－'
+	}
+	
+	multple.onclick = function(){
+		if(result!=''){
+			num1 = parseInt(result)
+			console.log(num1)
+			result = '' 
+			console.log('×')
+		}
+		op = '*'
+		display.innerHTML = '×'
+	}
+	
+	divide.onclick = function(){
+		if(result!=''){
+			num1 = parseInt(result)
+			console.log(num1)
+			result = '' 
+			console.log('÷')
+		}
+		op = '/'
+		display.innerHTML = '÷'
+	}
+	
+	equal.onclick = function(){
+		if(result!=''){
+			num2 = parseInt(result)
+			console.log(num2)
+			
+			switch(op){
+			case '+':
+				result = (num1 + num2) + ''
+				break
+			case '-':
+				result = (num1 - num2) + ''
+				break
+			case '*':
+				result = (num1 * num2) +''
+				break
+			case '/':
+				if(result == '0'){
+					result = '0으로 나눌 수 없습니다.'
+				}else{
+					result = (num1 / num2) +''
+				}
+				break
+			}
+			console.log('＝')
+			display.innerHTML = result
+			num1 = 0
+			num2 = 0
+			result = ''
+		}
+	}
+	
+	C.onclick = function(){
+		result = '0'
+		console.log('C')
+		display.innerHTML = '0'
+	}
+	
+	
+}
+
+
+</script>
+
+</html>
